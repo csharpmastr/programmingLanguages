@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language</title>
+    <link rel="stylesheet" type="text/css" href="calcu_style.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!--navigation bar-->
+        <a href="#" class="logo"><span id="J" style="color: #CB6406;">J</span><span id="rest">omar</span></a>
+        <ul class="navbar">
+            <li><a href="index.html">Calculator</a>
+                <a href="guess.html">Guess</a>
+                <a href="contrast.html">Contrast</a>
+            </li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    
+    <!--main calculator design-->
+    <div class="container">
+        <div class="frame" style="outline: solid;">
+            <form>
+                <i class='bx bx-history bx-lg' id="histIcon"></i>
+                <div class="display">
+                    <input type="text" name="display" maxlength="14" placeholder="0">
+                </div>
+                <div>
+                    <input type="button" value="AC" style="background-color: #CB6406;" id="all-Clear" onclick="allClearOps()">
+                    <input type="button" value="C" style="background: #731963;" onclick="display.value = ''">
+                    <input type="button" value="DEL" style="background: #731963;" onclick="display.value = display.value.toString().slice(0, -1)">
+                    <input type="button" value="&#8730" style="background: #731963;" id="sqrt" onclick="sqrtOps()">
+                </div>
+                <div>
+                    <input type="button" value="x&#178;" style="background: #731963;" id='square' onclick="squareOps()">
+                    <input type="button" value="&#177;" style="background: #731963;" id="negate" onclick="negateOps()">
+                    <input type="button" value="%" style="background: #731963;" id='percent' onclick="display.value += '%'">
+                    <input type="button" value="&#247;" style="background: #731963;" onclick="display.value += '/'">
+                </div>
+                <div>
+                    <input type="button" value="7" style="background: #183A37;" onclick="display.value += '7'">
+                    <input type="button" value="8" style="background: #183A37;" onclick="display.value += '8'">
+                    <input type="button" value="9" style="background: #183A37;" onclick="display.value += '9'">
+                    <input type="button" value="&#215;" style="background: #731963;" onclick="display.value += '*'">
+                </div>
+                <div>
+                    <input type="button" value="4" style="background: #183A37;" onclick="display.value += '4'">
+                    <input type="button" value="5" style="background: #183A37;" onclick="display.value += '5'">
+                    <input type="button" value="6" style="background: #183A37;" onclick="display.value += '6'">
+                    <input type="button" value="-" style="background: #731963;" onclick="display.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="1" style="background: #183A37;" onclick="display.value += '1'">
+                    <input type="button" value="2" style="background: #183A37;" onclick="display.value += '2'">
+                    <input type="button" value="3" style="background: #183A37;" onclick="display.value += '3'">
+                    <input type="button" value="+" style="background: #731963;" onclick="display.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="00" style="background: #183A37;" onclick="display.value += '00'">
+                    <input type="button" value="0" style="background: #183A37;" onclick="display.value += '0'">
+                    <input type="button" value="&bull;" style="background: #183A37;" onclick="display.value += '.'">
+                    <!-- <input type="button" value="=" style="background-color: #CB6406;" id="equal" onclick="display.value = eval(display.value)"> -->
+                    <input type="button" value="=" style="background-color: #CB6406;" id="equal" onclick="equalOps()">
+                </div>
+            </form>
+        </div>
+        <div class="history-box" id="historyBox">
+            <h2 class="hist">History</h2>
+            <h3 class="hist-value" id="log-value"></h3>
+        </div>
+    </div>
+    <script type="text/javascript" src="calcu_js.js"></script>
+</body>
+</html>
