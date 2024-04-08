@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text/Background Color Contrast Checker</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./constrast_style.css">
+</head>
+<body>
+    <header>
+        <!--navigation bar-->
+        <a href="#" class="logo"><span id="J" style="color: #572D9A;">J</span><span id="rest">omar</span></a>
+        <ul class="navbar">
+            <li><a href="calculator.html">Calculator</a>
+                <a href="guess.html">Guess</a>
+                <a href="contrast.html">Contrast</a>
+            </li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+
+    <div class="main">
+
+        <div class="container">
+            <h1>Text/Background Color Contrast Checker</h1>
+
+            <div class="form">
+                <div class="form-group">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" value="#000000">
+                </div>
+                <div class="form-group">
+                    <label for="bgColor">Background Color:</label>
+                    <input type="color" id="bgColor" value="#ffffff">
+                </div>
+            </div>
+
+            <div class="result">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+
+            <p>Contrast Rate:<br><span id="rating">10</span></p>
+
+            <button class="animated-button" onclick="contrastChecker()">
+                <span class="text">Check Contrast</span>
+                <span class="circle"></span>
+              </button>
+              
+        </div>
+
+    </div>
+
+    <!-- Script JS -->
+    <script src="./contrast_js.js"></script>
+</body>
+</html>
